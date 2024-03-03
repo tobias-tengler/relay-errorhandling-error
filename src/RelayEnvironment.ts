@@ -5,7 +5,13 @@ import {
   Store,
   FetchFunction,
   GraphQLSingularResponse,
+  RelayFeatureFlags,
 } from "relay-runtime";
+
+// @ts-expect-error
+RelayFeatureFlags.ENABLE_FIELD_ERROR_HANDLING = true;
+// @ts-expect-error
+RelayFeatureFlags.ENABLE_FIELD_ERROR_HANDLING_THROW_BY_DEFAULT = true;
 
 const fetchFn: FetchFunction = async (request, _variables) => {
   if (request.name === "AppQuery") {

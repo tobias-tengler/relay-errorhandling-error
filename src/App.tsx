@@ -46,6 +46,7 @@ function ProductData({ product }: { product: AppProductData$key }) {
     <div>
       <p>Name: {data.name}</p>
 
+      {/* Comment out the below to see the first query working as expected */}
       <ErrorBoundary fallback={<div>Product reviews error boundary</div>}>
         <ProductReviewsLoader productId={data.id} />
       </ErrorBoundary>
