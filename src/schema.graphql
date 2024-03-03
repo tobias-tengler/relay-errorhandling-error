@@ -1,0 +1,11 @@
+# Replace this with your own GraphQL schema file!
+type Query {
+  productById(id: ID!): Product
+}
+
+type Product {
+  id: ID!
+  name: String!
+  price: Float!
+  reviewCount: Int!
+}
